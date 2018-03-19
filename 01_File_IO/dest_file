@@ -1,0 +1,20 @@
+n) {
+			perror("write");
+			close(src_file);
+			close(dest_file);
+			exit(1);
+		}
+	}
+	if (real_read_len < 0) {
+		perror("read");
+		close(src_file);
+		close(dest_file);
+		exit(1);
+	}
+	/*4. 关闭文件 */
+	close(src_file);
+	close(dest_file);
+
+	return 0;
+}
+
